@@ -10,7 +10,7 @@ const SocialContainer = styled.div`
   justify-content: space-evenly;
 
   width: 100%;
-  padding: 1rem 0;
+  padding: 0.5rem 0;
 `;
 
 const Social = () => (

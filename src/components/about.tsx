@@ -3,10 +3,6 @@ import styled from "@emotion/styled";
 
 const Container = styled.div`
   display: block;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  margin-left: 0;
-  margin-right: 0;
   padding: 0.5rem 0;
 `;
 

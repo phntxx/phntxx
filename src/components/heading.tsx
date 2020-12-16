@@ -4,12 +4,14 @@ import Emoji from "./emoji";
 
 const Headline = styled.h1`
   margin: 0;
-  padding: 1rem 0.25rem;
+  padding: 0 0.25rem;
 `;
 
 const Container = styled.div`
   display: flex;
   flex-direction: row;
+  align-items: center;
+  justify-content: center;
 `;
 
 const Heading = () => (

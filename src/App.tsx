@@ -5,50 +5,36 @@ import { Global, css } from "@emotion/react";
 import Heading from "./components/heading";
 import Social from "./components/social";
 import About from "./components/about";
-import Imprint from "./components/imprint";
+import Contact from "./components/contact";
 
 const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  align-self: center;
-  max-width: 25%;
-
-  border: 1px solid black;
   padding: 1rem;
+
+  @media (min-width: 766px) {
+    max-width: 30%;
+  }
 `;
 
 const App = () => (
   <>
     <Global
       styles={css`
-        html,
         body {
-          margin: 0;
-          padding: 0;
-
-          width: 100%;
-          height: 100%;
+          font-family: "Work Sans", sans-serif;
         }
 
-        body {
-          font-family: Roboto, sans-serif;
-
-          @media (max-width: 766px) {
-            max-width: 90%;
-          }
-        }
-
-        body,
         #root {
           display: flex;
           align-items: center;
           justify-content: center;
         }
 
+        html,
+        body,
         #root {
-          width: fit-content;
+          height: 100%;
+          width: 100%;
+          margin: 0;
         }
       `}
     />
@@ -56,7 +42,7 @@ const App = () => (
       <Heading />
       <About />
       <Social />
-      <Imprint />
+      <Contact />
     </Container>
   </>
 );
