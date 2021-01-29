@@ -1,17 +1,12 @@
-FROM node:current-alpine
+FROM node:lts AS build
 
 WORKDIR /app
+COPY package.json yarn.lock ./
+RUN yarn install
 
-COPY yarn.lock .
-COPY package.json .
+COPY . ./
+RUN yarn build
 
-RUN [ "yarn", "install" ]
-
-COPY src /app/src
-COPY public /app/public
-
-RUN [ "yarn", "build" ]
-
-EXPOSE 3000 8080
-
-CMD [ "yarn", "serve:production" ]
+FROM ratisbonacoding/nginx-cloudflare-cache
+COPY --from=build /app/build /usr/share/nginx/html
+COPY nginx.conf /etc/nginx/nginx.conf
