@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "@emotion/styled";
 
+const email = "hello@phntxx.com";
+
 const Link = styled.a`
   text-decoration: none;
   color: black;
@@ -23,7 +25,7 @@ const Container = styled.div`
 
 const Contact = () => (
   <Container>
-    <Link href="mailto://phntxx@gmail.com">contact</Link>
+    <Link href={"mailto:" + email}>contact</Link>
   </Container>
 );
 
