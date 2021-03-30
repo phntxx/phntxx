@@ -1,32 +1,26 @@
-import React from "react";
 import styled from "@emotion/styled";
 
-const email = "hello@phntxx.com";
+import { Link } from "./link";
 
-const Link = styled.a`
-  text-decoration: none;
-  color: black;
+import { socialInfo } from "../constants";
 
-  padding: 0.5rem 0;
-
-  &:hover {
-    text-decoration: underline;
-  }
-`;
-
-const Container = styled.div`
-  margin: 0;
-  padding: 0;
-
+const SocialContainer = styled.div`
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: row;
+  justify-content: space-evenly;
+
+  width: 100%;
+  padding: 0.5rem 0;
 `;
 
 const Contact = () => (
-  <Container>
-    <Link href={"mailto:" + email}>contact</Link>
-  </Container>
+  <SocialContainer>
+    { socialInfo.map(({ name, url }, idx) => (
+      <Link key={[name, idx].join("")} href={url}>
+        { name}
+      </Link>
+    ))}
+  </SocialContainer >
 );
 
 export default Contact;

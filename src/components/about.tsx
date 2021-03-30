@@ -1,4 +1,3 @@
-import React from "react";
 import styled from "@emotion/styled";
 
 const Container = styled.div`
@@ -41,6 +40,9 @@ const About = () => (
       <Link href="https://thettp.org">the ttp</Link> and handle the maintenance
       and administration of their forum, which is a vital part of their
       community.
+    </Paragraph>
+    <Paragraph>
+      furthermore, i'm also involved with the <Link href="https://ratisbona-coding.org">ratisbona coding e.v.</Link>, where i help where possible, be it with server administration or web development.
     </Paragraph>
   </Container>
 );

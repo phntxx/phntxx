@@ -3,7 +3,6 @@ import styled from "@emotion/styled";
 import { Global, css } from "@emotion/react";
 
 import Heading from "./components/heading";
-import Social from "./components/social";
 import About from "./components/about";
 import Contact from "./components/contact";
 
@@ -41,7 +40,6 @@ const App = () => (
     <Container>
       <Heading />
       <About />
-      <Social />
       <Contact />
     </Container>
   </>
