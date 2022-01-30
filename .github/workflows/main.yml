@@ -8,7 +8,7 @@ on:
 
 jobs:
 
-  config:
+  style:
     runs-on: ubuntu-latest
     steps:
 
@@ -35,6 +35,23 @@ jobs:
       with:
         cmd: lint
 
+  phntxx:
+    runs-on: ubuntu-latest
+    steps:
+
+    - name: Checkout repository
+      uses: actions/checkout@master
+    
+    - name: Setup node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '16'
+
+    - name: Install dependencies
+      uses: borales/actions-yarn@v2.3.0
+      with:
+        cmd: install
+
     - name: Check code typing
       uses: borales/actions-yarn@v2.3.0
       with:
@@ -50,6 +67,14 @@ jobs:
       with:
         fail_ci_if_error: true
         verbose: true
+
+  build:
+    runs-on: ubuntu-latest
+    needs: [style, phntxx]
+    steps:
+
+    - name: Checkout repository
+      uses: actions/checkout@master
     
     - name: Set up QEMU
       uses: docker/setup-qemu-action@v1
