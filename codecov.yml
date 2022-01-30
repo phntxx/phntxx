@@ -1,0 +1,12 @@
+coverage:
+  status:
+    project:
+      default: off
+      dashboard:
+        target: 80%
+        flags: phntxx
+
+flags:
+  dashboard:
+    paths:
+      - src/components/

@@ -1,4 +1,4 @@
-interface IEmojiProps {
+export interface IEmojiProps {
   symbol: string;
   label?: string;
 }

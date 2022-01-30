@@ -15,12 +15,12 @@ const SocialContainer = styled.div`
 
 const Contact = () => (
   <SocialContainer>
-    { socialInfo.map(({ name, url }, idx) => (
+    {socialInfo.map(({ name, url }, idx) => (
       <Link key={[name, idx].join("")} href={url}>
-        { name}
+        {name}
       </Link>
     ))}
-  </SocialContainer >
+  </SocialContainer>
 );
 
 export default Contact;

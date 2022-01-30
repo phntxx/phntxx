@@ -4,7 +4,7 @@
 
 i'm a computer science student at the university of applied sciences in regensburg.
 
-i like to code things with varying levels of purpose, ranging from [dashboards](https://github.com/phntxx/dashboard) to [discord bots](https://github.com/phntxx/shishabot).
+i like to code things with varying levels of purpose, ranging from [dashboards](https://github.com/phntxx/dashboard) to [discord bots](https://github.com/phntxx/laundrybot).
 
 i am also one of the system managers of [the ttp](https://thettp.org) and handle the maintenance and administration of their forum, which is a vital part of their community.
 

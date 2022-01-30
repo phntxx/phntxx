@@ -33,7 +33,7 @@ const About = () => (
     <Paragraph>
       i like to code things with varying levels of purpose, ranging from{" "}
       <Link href="https://github.com/phntxx/dashboard">dashboards</Link> to{" "}
-      <Link href="https://github.com/phntxx/shishabot">discord bots</Link>.
+      <Link href="https://github.com/phntxx/laundrybot">discord bots</Link>.
     </Paragraph>
     <Paragraph>
       i am also one of the system managers of{" "}
@@ -42,7 +42,10 @@ const About = () => (
       community.
     </Paragraph>
     <Paragraph>
-      furthermore, i'm also involved with the <Link href="https://ratisbona-coding.org">ratisbona coding e.v.</Link>, where i help where possible, be it with server administration or web development.
+      furthermore, i'm also involved with the{" "}
+      <Link href="https://ratisbona-coding.org">ratisbona coding e.v.</Link>,
+      where i help where possible, be it with server administration or web
+      development.
     </Paragraph>
   </Container>
 );
