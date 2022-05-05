@@ -1,5 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`emoji.tsx should render component with label without crashing 1`] = `[Function]`;
-
-exports[`emoji.tsx should render component without label without crashing 1`] = `[Function]`;

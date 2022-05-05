@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>portfolio</title>
+    <style>
+      @font-face {
+        font-family: "Helvetica Neue";
+        font-style: normal;
+        font-weight: 700;
+        src: local("Helvetica Neue"),
+          url("./static/font/helvetica-neue-normal.woff") format("woff");
+      }
+
+      @font-face {
+        font-family: "Helvetica 65 Medium";
+        font-style: normal;
+        font-weight: 700;
+        src: local("Helvetica 65 Medium"),
+          url("./static/font/helvetica-neue-heavy.woff") format("woff");
+      }
+
+      @font-face {
+        font-family: "Helvetica 45 Light";
+        font-style: normal;
+        font-weight: 400;
+        src: local("Helvetica 45 Light"),
+          url("./static/font/helvetica-neue-light.woff") format("woff");
+      }
+
+      html,
+      body {
+        height: 100%;
+        width: 100%;
+        margin: 0;
+      }
+
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        font-family: "Helvetica Neue", sans-serif;
+        background-color: #f0eee5;
+      }
+
+      .container {
+        padding: 1rem;
+      }
+
+      h1,
+      .links {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+      }
+
+      h1 {
+        font-family: "Helvetica Neue 65 Medium", sans-serif;
+        text-align: center;
+      }
+
+      a {
+        color: #021627;
+        text-decoration: none;
+      }
+
+      a:hover {
+        color: #8b85c1;
+        text-decoration: underline;
+      }
+
+      .text {
+        text-align: justify;
+      }
+
+      .links {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+
+        list-style-type: none;
+      }
+
+      @media (min-width: 766px) {
+        .container {
+          max-width: 60%;
+        }
+      }
+      @media (prefers-color-scheme: dark) {
+        body {
+          background-color: #191f24;
+        }
+
+        h1 {
+          font-family: "Helvetica 45 Light", sans-serif;
+        }
+
+        h1,
+        p,
+        a {
+          color: #e3e5dc;
+        }
+
+        a:hover {
+          color: #aa7be0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="title">
+        <h1>👋🏻 hi! i'm bastian!</h1>
+      </div>
+      <div class="text">
+        <p class="text">
+          my name is bastian. on the internet i'm also known as phntxx.
+        </p>
+        <p class="text">
+          i'm a computer science student at the
+          <a href="https://oth-regensburg.de"
+            >university of applied sciences in regensburg.</a
+          >
+        </p>
+        <p class="text">
+          i like to code things with varying levels of purpose, ranging from
+          <a href="https://github.com/phntxx/dashboard">dashboards</a> to
+          <a href="https://github.com/phntxx/laundrybot">discord bots</a>.
+        </p>
+        <p class="text">
+          i am also one of the system managers of
+          <a href="https://thettp.org">the ttp</a> and handle the maintenance
+          and administration of their forum, which is a vital part of their
+          community.
+        </p>
+        <p class="text">
+          furthermore, i am also involved with the
+          <a href="https://ratisbona-coding.org">ratisbona coding e.v.</a>,
+          where i help where possible, be it with server administration or web
+          development.
+        </p>
+      </div>
+      <div class="social">
+        <ul class="links">
+          <li class="link"><a href="https://github.com/phntxx">github</a></li>
+          <li class="link">
+            <a href="https://www.linkedin.com/in/bastian-meissner/">linkedin</a>
+          </li>
+          <li class="link"><a href="https://twitter.com/phntxx">twitter</a></li>
+          <li class="link"><a href="mailto:hello@phntxx.com">e-mail</a></li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>

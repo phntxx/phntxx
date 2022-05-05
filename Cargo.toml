@@ -1,0 +1,11 @@
+[package]
+name = "phntxx"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+log = "0.4"
+env_logger = "0.8.4"
+gotham = "0.7.1"
+gotham_derive = "0.7.0"
+lazy_static = "1.4.0"

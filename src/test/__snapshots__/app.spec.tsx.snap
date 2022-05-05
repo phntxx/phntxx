@@ -1,3 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`app.tsx should render component without label without crashing 1`] = `[Function]`;
