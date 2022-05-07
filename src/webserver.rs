@@ -7,8 +7,8 @@ use log::{info, warn};
 fn router() -> Router {
 
     build_simple_router(|route| {
-        route.get("/").to_file("./data/index.html");
-        route.get("/static/*").to_dir("./data/static");
+        route.get("/").to_file("./docs/index.html");
+        route.get("/static/*").to_dir("./docs/static");
     })
 }
 
@@ -27,19 +27,12 @@ mod tests {
     use gotham::test::TestServer;
     use gotham::hyper::StatusCode;
 
-    fn generate_test_server() -> TestServer {
-        let state: Arc<Mutex<Config>> = Arc::new(Mutex::new(Config::new()));
-        let test_server = TestServer::new(router(template_file, static_path, state)).unwrap();
-
-        return test_server;
-    }
-
     #[test]
     fn index_get() {
-        let test_server = generate_test_server();
+        let test_server = TestServer::new(router()).unwrap();
         let response = test_server
             .client()
-            .get("http://localhost")
+            .get("http://localhost/")
             .perform()
             .unwrap();
 
@@ -48,10 +41,10 @@ mod tests {
 
     #[test]
     fn static_get() {
-        let test_server = generate_test_server();
+        let test_server = TestServer::new(router()).unwrap();
         let response = test_server
             .client()
-            .get("http://localhost/static/.gitkeep")
+            .get("http://localhost/static/font/")
             .perform()
             .unwrap();
 
@@ -60,7 +53,7 @@ mod tests {
 
     #[test]
     fn static_test_get() {
-        let test_server = generate_test_server();
+        let test_server = TestServer::new(router()).unwrap();
         let response = test_server
             .client()
             .get("http://localhost/static/test.png")
@@ -68,35 +61,5 @@ mod tests {
             .unwrap();
 
         assert_eq!(response.status(), StatusCode::NOT_FOUND);
-    }
-
-    #[test]
-    fn get_template() {
-        let template_file = "./data/template.hbs";
-        let state: Arc<Mutex<Config>> = Arc::new(Mutex::new(Config::new()));
-
-        let template = generate_template(template_file, state);
-
-        let result =  match template {
-            Ok(_ok) => 0,
-            Err(_err) => 1
-        };
-
-        assert_eq!(result, 0);
-    }
-
-    #[test]
-    fn get_template_fail() {
-        let template_file = "./data/fail.hbs";
-        let state: Arc<Mutex<Config>> = Arc::new(Mutex::new(Config::new()));
-
-        let template = generate_template(template_file, state);
-
-        let result =  match template {
-            Ok(_ok) => 0,
-            Err(_err) => 1
-        };
-
-        assert_eq!(result, 1);
     }
 }
