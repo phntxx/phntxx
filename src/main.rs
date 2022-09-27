@@ -1,4 +1,5 @@
 use std::env::var;
+use std::process::exit;
 use log::{info, warn};
 
 use gotham::{
@@ -8,14 +9,20 @@ use gotham::{
 use lazy_static::lazy_static;
 
 lazy_static! {
-    static ref ADDRESS: String = var("ADDRESS").unwrap();
+    static ref ADDRESS: String = match var("ADDRESS") {
+        Ok(address) => address,
+        Err(_e) => {
+            eprintln!("ERROR: Couldn't find environment variable ADDRESS");
+            exit(1)
+        },
+    };
 }
 
 fn router() -> Router {
     build_simple_router(|route| {
-        route.get("/").to_file("./docs/index.html");
-        route.get("/static/*").to_dir("./docs/static");
-        route.get("/css/*").to_dir("./docs/css");
+        route.get("/").to_file("./page/index.html");
+        route.get("/static/*").to_dir("./page/static");
+        route.get("/css/*").to_dir("./page/css");
     })
 }
 

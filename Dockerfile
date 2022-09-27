@@ -15,12 +15,13 @@ RUN cargo build --release
 # User: Get the executable and run it
 FROM alpine:latest
 
-RUN addgroup -g 1000 phntxx
-RUN adduser -D -s /bin/sh -u 1000 -G phntxx phntxx
+RUN addgroup -g 1000 user
+RUN adduser -D -s /bin/sh -u 1000 -G user user
 
 WORKDIR /app
-COPY --from=build --chmod=777 --chown=minidash:minidash /app/target/release/phntxx ./
-USER phntxx
+COPY page ./page/
+COPY --from=build --chmod=777 --chown=user:user /app/target/release/phntxx ./
+USER user
 
 ENV RUST_LOG="phntxx"
 ENV ADDRESS="0.0.0.0:3000"
