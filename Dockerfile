@@ -19,7 +19,7 @@ RUN addgroup -g 1000 user
 RUN adduser -D -s /bin/sh -u 1000 -G user user
 
 WORKDIR /app
-COPY page ./page/
+COPY docs ./docs/
 COPY --from=build --chmod=777 --chown=user:user /app/target/release/phntxx ./
 USER user
 

@@ -20,9 +20,9 @@ lazy_static! {
 
 fn router() -> Router {
     build_simple_router(|route| {
-        route.get("/").to_file("./page/index.html");
-        route.get("/static/*").to_dir("./page/static");
-        route.get("/css/*").to_dir("./page/css");
+        route.get("/").to_file("./docs/index.html");
+        route.get("/static/*").to_dir("./docs/static");
+        route.get("/css/*").to_dir("./docs/css");
     })
 }
 
