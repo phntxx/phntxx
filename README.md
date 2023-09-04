@@ -4,23 +4,12 @@
 
 i'm a computer science student at the [university of applied sciences in regensburg](https://oth-regensburg.de) and a working student at [DRACOON](https://dracoon.com).
 
-i like to code things with varying levels of purpose, ranging from [dashboards](https://github.com/phntxx/dashboard) to [discord bots](https://github.com/phntxx/laundrybot).
+i like to code things with varying levels of purpose, ranging from [dashboards](https://github.com/phntxx/dashboard) to [spotify playlist analyzers](https://github.com/phntxx/playlist-analyzer).
 
 i am also one of the system managers of [the ttp](https://thettp.org) and handle the maintenance and administration of their forum, which is a vital part of their community.
 
 furthermore, i'm also involved with the [ratisbona coding e.v.](https://ratisbona-coding.org), where i help where possible, be it with server administration or web development.
 
-<!--
-**phntxx/phntxx** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+in my spare time i like to tinker with just about anything. i write about some of those projects on [my blog](https://blog.phntxx.com).
 
-Here are some ideas to get you started:
-
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+i sometimes dj in my spare time, the fruits of which can be found on [soundcloud](https://soundcloud.com/phntxx).
