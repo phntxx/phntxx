@@ -26,4 +26,6 @@ USER user
 ENV RUST_LOG="phntxx"
 ENV ADDRESS="0.0.0.0:3000"
 
+EXPOSE 3000
+
 ENTRYPOINT ["./phntxx"]
