@@ -2,7 +2,7 @@
 
 ![github stats](https://github-readme-stats.vercel.app/api?username=phntxx&show_icons=true&icon_color=0366d6&bg_color=ffffff&hide_title=true)
 
-i'm a computer science student at the [university of applied sciences in regensburg](https://oth-regensburg.de) and a working student at [DRACOON](https://dracoon.com).
+i'm a computer science student at the [university of erlangen-nuremberg](https://fau.de) and a working student at [DRACOON](https://dracoon.com).
 
 i like to code things with varying levels of purpose, ranging from [dashboards](https://github.com/phntxx/dashboard) to [spotify playlist analyzers](https://github.com/phntxx/playlist-analyzer).
 
